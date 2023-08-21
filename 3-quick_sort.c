@@ -1,4 +1,5 @@
 #include "sort.h"
+#include "print_array.c"
 /**
 * partition - Partions array using lomuto partition scheme
 * @array: array to partition
