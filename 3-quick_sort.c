@@ -16,12 +16,12 @@ int partition(int* array, int low, int high, size_t size)
 	{
 		if (array[j] < pivot)
 		{
-			i++;
 			temp = array[i];
 			array[i] = array[j];
 			array[j] = temp;
+			print_array(array, size);
+			i++;
 		}
-		print_array(array, size);
 	}
 	temp = array[i + 1];
 	array[i + 1] = array[high];
@@ -58,5 +58,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-	quick_sort_helper(array, 0, size -1, size);
+	quick_sort_helper(array, 0, size - 1, size);
 }
