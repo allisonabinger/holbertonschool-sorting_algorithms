@@ -43,7 +43,7 @@ void quick_sort_helper(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
-		int pivot_index = partition(array, low, high);
+		int pivot_index = partition(array, low, high, size);
 		
 		quick_sort_helper(array, low, pivot_index - 1);
 		quick_sort_helper(array, pivot_index + 1, high);
