@@ -4,7 +4,7 @@
  * @xp: pointer to first integer
  * @yp: pointer to second integer
  */
- void _swap(int *xp, int *yp)
+ void *_swap(int *xp, int *yp)
  {
     int temp = *xp;
     *xp = *yp;
