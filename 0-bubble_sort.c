@@ -5,29 +5,28 @@
  * @array: array of integers
  * @size: size of the array
  */
- void bubble_sort(int *array, size_t size)
- {
-    size_t i;
-    size_t j = size;
-    bool bubble = false;
+void bubble_sort(int *array, size_t size)
+{
+	size_t i,
+    size_t j;
+	bool bubble;
 
-    if (array == NULL || size < 2)
-    {
-        return;
-    }
+	if (array == NULL)
+		return;
 
-    while (bubble == false)
-    {
-        bubble = true;
-        for(i = 0; i < j - 1; i++)
-        {
-            if (array[i] > array[i + 1])
-            {
-                swap(array + i, array + 1 + 1);
-                print_array(array, size);
-                bubble = false;
-            }
-        }
-        j--;
-    }
- }
+	for (i = 0; i < size - 1; i++)
+	{
+		bubble = true;
+		for (j = 0; j < size - i - 1; j++)
+		{
+			if (array[j] > array[j + 1])
+			{
+				swap(&array[j], &array[j + 1]);
+				swapped = false;
+				print_array(array, size);
+			}
+		}
+		if (bubble == true)
+			break;
+	}
+}
