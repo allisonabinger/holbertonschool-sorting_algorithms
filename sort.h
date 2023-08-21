@@ -24,6 +24,17 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
+/*
+* etf bool - true or false enumeration of boolean values
+* @false: 0
+* @true: 1
+*/
+typedef etf bool
+{
+    false = 0,
+    true
+} bool;
+
 /*Prototypes*/
 
 void print_array(const int *array, size_t size);

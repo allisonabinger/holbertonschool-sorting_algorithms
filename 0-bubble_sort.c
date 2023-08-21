@@ -18,17 +18,27 @@
  */
  void bubble_sort(int *array, size_t size)
  {
-    size_t i, j;
+    size_t i;
+    size_t j = size;
+    bool bubble = false;
 
-    for (i = 0; i < size - 1; i++)
+    if (array == NULL || size < 2)
     {
-        for (j = 0; j < size - i - j; j++)
+        return;
+    }
+
+    while (bubble == false)
+    {
+        bubble = true;
+        for(i = 0; i < j - 1; i++)
         {
-            if(array[j] > array[j + 1])
+            if (array[i] > array[i + 1])
             {
-                _swap(&array[j], &array[j + 1]);
+                _swap(array + i, array + 1 + 1);
                 print_array(array, size);
+                bubble = false;
             }
         }
+        j--;
     }
  }
