@@ -1,4 +1,5 @@
 #include "sort.h"
+#include "swap.c"
 /**
 *partition - Partions array using lomuto partition scheme
 * @array: array to partition
@@ -16,7 +17,7 @@ int partition(int *array, int low, int high)
 	{
 		if (array[j] < pivot)
 		{
-			i++
+			i++;
 			swap(&array[i], &array[j]);
 		}
 	}
@@ -30,6 +31,7 @@ int partition(int *array, int low, int high)
 * @low: starting index of partition
 * @high: ending index of partition
 */
+
 void quick_sort_helper(int *array, int low, int high)
 {
 	if (low < high)
@@ -49,7 +51,7 @@ void quick_sort_helper(int *array, int low, int high)
 */
 void quick_sort(int *array, size_t size)
 {
-	if (array == NULL || szie < 2)
+	if (array == NULL || size < 2)
 		return;
 	quick_sort_helper(array, 0, size -1);
 }
