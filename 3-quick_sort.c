@@ -42,7 +42,7 @@ void quick_sort_helper(int *array, int low, int high)
 	{
 		int pivot_index = partition(array, low, high);
 
-		print_array(array, high - low + 1);
+		print_array(array + low, high - low + 1);
 		quick_sort_helper(array, low, pivot_index - 1);
 		quick_sort_helper(array, pivot_index + 1, high);
 	}
