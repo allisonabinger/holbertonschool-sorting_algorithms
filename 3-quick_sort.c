@@ -6,7 +6,7 @@
 * @high: ending index
 * Return: index of pivot element
 */
-int partition(int* array, int low, int high)
+int partition(int* array, int low, int high, size_t size)
 {
 	int pivot = array[high];
 	int i = low - 1;
@@ -20,12 +20,13 @@ int partition(int* array, int low, int high)
 			temp = array[i];
 			array[i] = array[j];
 			array[j] = temp;
+			print_array(array, size);
 		}
 	}
 	temp = array[i + 1];
 	array[i + 1] = array[high];
 	array[high] = temp;
-
+	print_array(array, size);
 	return (i + 1);
 }
 
@@ -36,13 +37,12 @@ int partition(int* array, int low, int high)
 * @high: ending index of partition
 */
 
-void quick_sort_helper(int *array, int low, int high)
+void quick_sort_helper(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
-		int pivot_index = partition(array, low, high);
+		int pivot_index = partition(array, low, high, size);
 
-		print_array(array + low, high - low + 1);
 		quick_sort_helper(array, low, pivot_index - 1);
 		quick_sort_helper(array, pivot_index + 1, high);
 	}
@@ -58,5 +58,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-	quick_sort_helper(array, 0, size -1);
+	quick_sort_helper(array, 0, size - 1, size);
 }
