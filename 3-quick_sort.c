@@ -20,13 +20,14 @@ int partition(int* array, int low, int high, size_t size)
 			temp = array[i];
 			array[i] = array[j];
 			array[j] = temp;
-			print_array(array, size);
 		}
+		print_array(array, size);
 	}
 	temp = array[i + 1];
 	array[i + 1] = array[high];
 	array[high] = temp;
 	print_array(array, size);
+
 	return (i + 1);
 }
 
@@ -41,10 +42,10 @@ void quick_sort_helper(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
-		int pivot_index = partition(array, low, high, size);
-
-		quick_sort_helper(array, low, pivot_index - 1, size);
-		quick_sort_helper(array, pivot_index + 1, high, size);
+		int pivot_index = partition(array, low, high);
+		
+		quick_sort_helper(array, low, pivot_index - 1);
+		quick_sort_helper(array, pivot_index + 1, high);
 	}
 }
 
@@ -58,5 +59,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-	quick_sort_helper(array, 0, size - 1, size);
+	quick_sort_helper(array, 0, size -1, size);
 }
