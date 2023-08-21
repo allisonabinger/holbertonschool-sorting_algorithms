@@ -29,7 +29,7 @@ typedef struct listint_s
 * @false: 0
 * @true: 1
 */
-typedef etf bool
+typedef enum bool
 {
     false = 0,
     true
@@ -37,9 +37,9 @@ typedef etf bool
 
 /*Prototypes*/
 
+void swap(int *xp, int *yp);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-void _swap(int *xp, int *yp);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);

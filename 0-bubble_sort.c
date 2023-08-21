@@ -34,7 +34,7 @@
         {
             if (array[i] > array[i + 1])
             {
-                _swap(array + i, array + 1 + 1);
+                swap(array + i, array + 1 + 1);
                 print_array(array, size);
                 bubble = false;
             }
