@@ -25,7 +25,7 @@ typedef struct listint_s
 } listint_t;
 
 /*
-* etf bool - true or false enumeration of boolean values
+* enum bool - true or false enumeration of boolean values
 * @false: 0
 * @true: 1
 */
