@@ -1,4 +1,5 @@
 #include "sort.h"
+#include "swap.c" /* Why do i have to do this? its defined in sort.h :( */
 /**
  * bubble_sort - sorts an array of integers in ascending order
  * @array: array of integers

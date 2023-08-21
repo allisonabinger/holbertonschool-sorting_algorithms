@@ -1,5 +1,4 @@
 #include "sort.h"
-#include "swap.c" /* Why do i have to do this? its defined in sort.h :( */
 /**
 * swap - swaps two elements of an array
 * @xp: pointer to first integer
