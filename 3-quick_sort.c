@@ -1,8 +1,6 @@
 #include "sort.h"
-#include "swap.c"
-
 /**
-*partition - Partions array using lomuto partition scheme
+* partition - Partions array using lomuto partition scheme
 * @array: array to partition
 * @low: starting index
 * @high: ending index
@@ -27,7 +25,7 @@ int *partition(int* array, int low, int high)
 	temp = array[i + 1];
 	array[i + 1] = array[high];
 	array[high] = temp;
-	
+
 	return (i + 1);
 }
 
